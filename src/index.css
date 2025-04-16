@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, 
+body, 
+#root {
+  height: 100%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,9 +31,19 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.app-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
 }
 
 h1 {
@@ -53,6 +69,25 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.color-picker, .color-input {
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.color-input-field {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
