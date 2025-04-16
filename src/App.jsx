@@ -4,6 +4,7 @@ import ColorDisplay from './components/ColorDisplay';
 import ContrastBox from './components/ContrastBox';
 import ThemeToggle from './components/ThemeToggle';
 import CopyButton from './components/CopyButton';
+import ColorInput from './components/ColorInput';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ContrastBox />
       <ThemeToggle />
       <CopyButton />
+      <ColorInput />
     </div>
   );
 }
