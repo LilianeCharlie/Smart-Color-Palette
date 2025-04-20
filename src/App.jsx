@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { isValidCssColor, toHexColor } from "./utils/colorHelpers";
 import "./styles/App.css";
 import ColorPicker from "./components/ColorPicker";
 import ColorInput from "./components/ColorInput";
