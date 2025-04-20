@@ -22,16 +22,7 @@ const App = () => {
         className="color-input"
       />
 
-      <div
-        className="color-preview"
-        style={{
-          marginTop: "2rem",
-          height: "100px",
-          backgroundColor: selectedColor,
-          borderRadius: "8px",
-        }}
-      />
-      <ColorDisplay />
+      <ColorDisplay color={selectedColor} />
       <ContrastBox />
       <ThemeToggle />
       <CopyButton />

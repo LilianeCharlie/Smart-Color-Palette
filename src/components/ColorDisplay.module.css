@@ -1,0 +1,11 @@
+.colorDisplay {
+    margin-top: 2rem;
+    height: 200px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
