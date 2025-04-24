@@ -9,7 +9,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import CopyButton from "./components/CopyButton";
 
 const App = () => {
-  const [selectedColor, setSelectedColor] = useState("#ff0000");
+  const [selectedColor, setSelectedColor] = useState("#00A1F1");
 
   return (
     <div className="app-container">
