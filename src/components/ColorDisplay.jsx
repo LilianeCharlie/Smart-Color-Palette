@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ColorDisplay.module.css";
 import { toHexColor } from "../utils/colorHelpers";
+import { generateGradientShades } from "../utils/colorVariants";
+import GradientCard from "./GradientCard";
 
 const getTextColor = (color) => {
   const hex = color.startsWith("#") ? color : toHexColor(color);
@@ -14,6 +16,7 @@ const getTextColor = (color) => {
 const ColorDisplay = ({ color }) => {
   const hex = color.startsWith("#") ? color : toHexColor(color);
   const textColor = getTextColor(hex);
+  const gradientColors = generateGradientShades(hex);
 
   return (
     <div
@@ -21,6 +24,11 @@ const ColorDisplay = ({ color }) => {
       style={{ backgroundColor: hex, color: textColor }}
     >
       <p>Hex Value: {hex}</p>
+      <div className={styles.gradienList}>
+        {gradientColors.map((shade, index) => (
+          <GradientCard key={index} color={shade} />
+        ))}
+      </div>
     </div>
   );
 };
