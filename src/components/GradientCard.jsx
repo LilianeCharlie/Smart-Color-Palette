@@ -1,15 +1,18 @@
 import React from "react";
+import { getAccessibleTextColor } from "../utils/colorHelpers";
 import "./GradientCard.css";
 
-const GradientCard = ({ color, label }) => {
+const GradientCard = ({ color }) => {
+  const textColor = getAccessibleTextColor(color);
+
   return (
     <div
-      className={`gradient-card ${
-        label === "Selected Color" ? "selected" : ""
-      }`}
-      style={{ backgroundColor: color }}
+      className="gradient-card"
+      style={{
+        backgroundColor: color,
+        color: textColor,
+      }}
     >
-      {label && <div className="gradient-card-label">{label}</div>}
       <div className="gradient-card-hex">{color}</div>
     </div>
   );

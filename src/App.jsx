@@ -4,6 +4,7 @@ import "./styles/App.css";
 import ColorPicker from "./components/ColorPicker";
 import ColorInput from "./components/ColorInput";
 import ColorDisplay from "./components/ColorDisplay";
+import GradientCardList from "./components/GradientCardList";
 import ContrastBox from "./components/ContrastBox";
 import ThemeToggle from "./components/ThemeToggle";
 import CopyButton from "./components/CopyButton";
@@ -15,17 +16,20 @@ const App = () => {
     <div className="app-container">
       <h1>Smart Color Palette</h1>
 
-      <ColorPicker onChange={setSelectedColor} className="color-picker" />
-      <ColorInput
-        value={selectedColor}
-        onChange={setSelectedColor}
-        className="color-input"
-      />
+      <div className="palette-wrapper">
+        <ColorPicker onChange={setSelectedColor} className="color-picker" />
+        <ColorInput
+          value={selectedColor}
+          onChange={setSelectedColor}
+          className="color-input"
+        />
 
-      <ColorDisplay color={selectedColor} />
-      <ContrastBox />
-      <ThemeToggle />
-      <CopyButton />
+        <ColorDisplay color={selectedColor} />
+        <GradientCardList baseColor={selectedColor} />
+        <ContrastBox />
+        <ThemeToggle />
+        <CopyButton />
+      </div>
     </div>
   );
 };
