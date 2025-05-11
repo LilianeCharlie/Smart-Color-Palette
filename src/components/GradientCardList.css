@@ -1,0 +1,11 @@
+.gradient-card-wrapper {
+    border-radius: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gradient-card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}

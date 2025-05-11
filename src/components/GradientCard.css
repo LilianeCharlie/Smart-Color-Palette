@@ -1,13 +1,11 @@
 .gradient-card {
     padding: 1rem;
-    border-radius: 8px;
     text-align: center;
     color: #fff;
-    margin-bottom: 0.5rem;
     font-weight: bold;
     height: 60px;
     display: flex;
-    flex-direction: colum;
+    flex-direction: column;
     justify-content: center;
     background-color: gray;
 }
