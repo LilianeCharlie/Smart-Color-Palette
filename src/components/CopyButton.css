@@ -1,0 +1,30 @@
+.copy-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.copy-text {
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.copy-wrapper:hover .copy-text {
+    opacity: 1;
+    pointer-events: auto;
+}
+

@@ -1,5 +1,6 @@
 import React from "react";
 import { getAccessibleTextColor } from "../utils/colorHelpers";
+import CopyButton from "./CopyButton";
 import "./GradientCard.css";
 
 const GradientCard = ({ color }) => {
@@ -13,7 +14,20 @@ const GradientCard = ({ color }) => {
         color: textColor,
       }}
     >
-      <div className="gradient-card-hex">{color}</div>
+      <div className="hex-stack">
+        <div>
+          Background:{" "}
+          <span className="copy-wrapper">
+            {color} <CopyButton value={color} />
+          </span>
+        </div>
+        <div>
+          Text:{" "}
+          <span className="copy-wrapper">
+            {textColor} <CopyButton value={textColor} />
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

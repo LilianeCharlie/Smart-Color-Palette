@@ -5,9 +5,8 @@ import ColorPicker from "./components/ColorPicker";
 import ColorInput from "./components/ColorInput";
 import ColorDisplay from "./components/ColorDisplay";
 import GradientCardList from "./components/GradientCardList";
-import ContrastBox from "./components/ContrastBox";
-import ThemeToggle from "./components/ThemeToggle";
 import CopyButton from "./components/CopyButton";
+import ThemeToggle from "./components/ThemeToggle";
 
 const App = () => {
   const [selectedColor, setSelectedColor] = useState("#00A1F1");
@@ -26,9 +25,7 @@ const App = () => {
 
         <ColorDisplay color={selectedColor} />
         <GradientCardList baseColor={selectedColor} />
-        <ContrastBox />
         <ThemeToggle />
-        <CopyButton />
       </div>
     </div>
   );
